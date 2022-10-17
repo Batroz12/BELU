@@ -24,25 +24,25 @@ export class AgregarEmpleadoComponent {
   public posicion: number = -1
   Agregar(): void {
     this.agregarEmpleadoService.AgregarEmpleadoService(this.empleado);
-    // if(this.posicion == -1){
-    // this.empleado.Id = this.ListaEmp.length + 1;
-    // this.ListaEmp.push(this.empleado);
-    // this.empleado= this.EmpleadoVacio();
-    // console.log("Hay:",this.ListaEmp.length,"empleados")
-    // console.table(this.ListaEmp)
-    // }
-    // else{
-    //   let selectEmpleado: Empleado =  this.ListaEmp[this.posicion];
-    //   selectEmpleado.Id = this.empleado.Id;
-    //   selectEmpleado.Nombre = this.empleado.Nombre;
-    //   selectEmpleado.Apellido = this.empleado.Apellido;
-    //   selectEmpleado.Edad = this.empleado.Edad;
-    //   selectEmpleado.Usuario = this.empleado.Usuario;
-    //   this.empleado = this.EmpleadoVacio();
-    //   this.posicion = -1;
-    //   console.table(this.ListaEmp)
-    // }
-}
+  //   if(this.posicion == -1){
+  //     this.empleado.Id = this.ListaEmp.length + 1;
+  //     this.ListaEmp.push(this.empleado);
+  //     this.empleado= this.EmpleadoVacio();
+  //     console.log("Hay:",this.ListaEmp.length,"empleados")
+  //     console.table(this.ListaEmp)
+  //     }
+  //     else{
+  //       let selectEmpleado: Empleado =  this.ListaEmp[this.posicion];
+  //       selectEmpleado.Id = this.empleado.Id;
+  //       selectEmpleado.Nombre = this.empleado.Nombre;
+  //       selectEmpleado.Apellido = this.empleado.Apellido;
+  //       selectEmpleado.Edad = this.empleado.Edad;
+  //       selectEmpleado.Usuario = this.empleado.Usuario;
+  //       this.empleado = this.EmpleadoVacio();
+  //       this.posicion = -1;
+  //       console.table(this.ListaEmp)
+  //     }
+  }
   EmpleadoVacio(): Empleado{
   return{
     Id: 0,
@@ -54,10 +54,10 @@ export class AgregarEmpleadoComponent {
  }
    eliminar(i: number):void{
     this.agregarEmpleadoService.eliminarEmpleadoService(this.posicion);
-   }
+   };
 
    editar(i: number):void{
-    this.agregarEmpleadoService.editarEmpleadoService;
+    this.agregarEmpleadoService.editarEmpleadoService(this.posicion);
   };
 
 }
