@@ -49,14 +49,15 @@ export class AgregarService {
     this.ListaEmp.splice(i,1);
     console.table(this.ListaEmp)
    }
-   editarEmpleadoService(i:number): void{
-    let selectEmpleado: Empleado =  this.ListaEmp[i];
-    this.empleado.Id = selectEmpleado.Id;
-    this.empleado.Nombre = selectEmpleado.Nombre;
-    this.empleado.Apellido = selectEmpleado.Apellido;
-    this.empleado.Edad = selectEmpleado.Edad;
-    this.empleado.Usuario = selectEmpleado.Usuario;
-    this.posicion = i;
-    console.table(this.ListaEmp)
+   editarEmpleadoService(i:number, empleadoEditado:Empleado): void{
+    this.ListaEmp[i]=empleadoEditado;
+    // let selectEmpleado: Empleado =  this.ListaEmp[i];
+    // this.empleado.Id = selectEmpleado.Id;
+    // this.empleado.Nombre = selectEmpleado.Nombre;
+    // this.empleado.Apellido = selectEmpleado.Apellido;
+    // this.empleado.Edad = selectEmpleado.Edad;
+    // this.empleado.Usuario = selectEmpleado.Usuario;
+    // this.posicion = i;
+    // console.table(this.ListaEmp)
   };
 }

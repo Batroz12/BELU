@@ -12,11 +12,15 @@ export class VerEmpleadosComponent implements OnInit {
 
   @Input() indice:number;
 
-
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  items = [''];
+
+  AgregarCaracteristica(newItem:string){
+    this.items.push(newItem);
+    console.log(this.items)
+  }
 }

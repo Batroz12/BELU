@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AgregarEmpleadoComponent } from './agregar-empleado/agregar-empleado.component';
 import { VerEmpleadosComponent } from './ver-empleados/ver-empleados.component';
+import { CaracteristicasEmpleadoComponent } from './caracteristicas-empleado/caracteristicas-empleado.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AgregarEmpleadoComponent,
-    VerEmpleadosComponent
+    VerEmpleadosComponent,
+    CaracteristicasEmpleadoComponent
   ],
   imports: [
     BrowserModule,

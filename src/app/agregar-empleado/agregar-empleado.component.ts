@@ -9,6 +9,8 @@ import { AgregarService } from '../Servicios/agregar.service';
 })
 export class AgregarEmpleadoComponent {
   title = 'MinimarketBelu';
+  esEdicion:boolean=false;
+
   constructor(private agregarEmpleadoService:AgregarService){
     this.ListaEmp = agregarEmpleadoService.ListaEmp;
   }
@@ -24,6 +26,7 @@ export class AgregarEmpleadoComponent {
   public posicion: number = -1
   Agregar(): void {
     this.agregarEmpleadoService.AgregarEmpleadoService(this.empleado);
+    this.empleado=this.EmpleadoVacio();
   //   if(this.posicion == -1){
   //     this.empleado.Id = this.ListaEmp.length + 1;
   //     this.ListaEmp.push(this.empleado);
@@ -57,7 +60,25 @@ export class AgregarEmpleadoComponent {
    };
 
    editar(i: number):void{
-    this.agregarEmpleadoService.editarEmpleadoService(this.posicion);
+    // this.agregarEmpleadoService.editarEmpleadoService(this.posicion);
+    this.esEdicion=true;
+    this.empleado=this.cargaEmpleado(this.ListaEmp[i]);
+    this.posicion=i;
   };
+
+   cargaEmpleado(empleado:Empleado): Empleado{
+    return{
+      Id: empleado.Id,
+      Nombre:empleado.Nombre,
+      Apellido:empleado.Apellido,
+      Edad: empleado.Edad,
+      Usuario:empleado.Usuario
+    };
+   }
+   AceptarEdicion():void{
+    this.agregarEmpleadoService.editarEmpleadoService(this.posicion,this.empleado);
+    this.esEdicion=false;
+    this.empleado=this.EmpleadoVacio();
+   }
 
 }
