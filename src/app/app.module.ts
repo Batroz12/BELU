@@ -12,6 +12,10 @@ import { VerAlmacenComponent } from './ver-almacen/ver-almacen.component';
 import { CaracteristicaAlmacenComponent } from './caracteristica-almacen/caracteristica-almacen.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
+import { LoginComponent } from './login/login.component';
+import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
+import { MenuAdmiComponent } from './menu-admi/menu-admi.component';
+import { PedidosComponent } from './pedidos/pedidos.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { NavComponent } from './nav/nav.component';
     VerAlmacenComponent,
     CaracteristicaAlmacenComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    LoginComponent,
+    MenuPrincipalComponent,
+    MenuAdmiComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,

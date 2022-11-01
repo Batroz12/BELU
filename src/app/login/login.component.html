@@ -1,0 +1,22 @@
+<body>
+<div class="box">
+  <div class="form">
+    <h2>Sign in</h2>
+    <div class="inputBox">
+      <input type="email" required="required" [(ngModel)]="administrador.Correo">
+      <span>Usuario</span>
+      <i></i>
+    </div>
+    <div class="inputBox">
+      <input type="password" required="required" [(ngModel)]="administrador.Password">
+      <span>Contraseña</span>
+      <i></i>
+    </div>
+    <br>
+    <div class="links">
+      <a href="#">Olvido su Contraseña</a>
+    </div>
+    <input type="submit" value="Login" class="btn float-right login_btn" (click)="Acceder()">
+  </div>
+</div>
+</body>
