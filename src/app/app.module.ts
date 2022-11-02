@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,8 @@ import { LoginComponent } from './login/login.component';
 import { MenuPrincipalComponent } from './menu-principal/menu-principal.component';
 import { MenuAdmiComponent } from './menu-admi/menu-admi.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
+import { AgregarPedidoComponent } from './agregar-pedido/agregar-pedido.component';
+import { ListarPedidosComponent } from './listar-pedidos/listar-pedidos.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +33,15 @@ import { PedidosComponent } from './pedidos/pedidos.component';
     LoginComponent,
     MenuPrincipalComponent,
     MenuAdmiComponent,
-    PedidosComponent
+    PedidosComponent,
+    AgregarPedidoComponent,
+    ListarPedidosComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

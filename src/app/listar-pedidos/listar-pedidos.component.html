@@ -1,0 +1,42 @@
+<!-- <div class="conteiner mt-5">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card">
+        <div class="card-body text-center">
+          <span class="titulo">Listado de Pedidos</span>
+          <button class="btn btn-dark float-end" routerLink="/Agregar-Pedido">Nuevo</button>
+          <table class="table table-dark table-striped mt-3">
+            <thead>
+              <tr>
+                <th scope="col">Cliente</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Condicion</th>
+                <th scope="col">Precio Total</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let Pedido of ListaPedidos">
+                <td>{{ Pedido.Cliente }}</td>
+                <td>{{ Pedido.Estado }}</td>
+                <td>{{ Pedido.Condicion }}</td>
+                <td>{{ Pedido.PrecioTotal | currency:'USD' }}</td>
+                <td>
+                    <i class="fas fa-edit"></i>
+                    <i class="fas fa-trash"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<ul class="list-group">
+  <li
+  class="list-group-item list-group-item-action">
+  <span class="badge  bg-dark">{{ pedidoLista.Id }}</span> {{ pedidoLista.Cliente }} - {{ pedidoLista.Estado }} - {{ pedidoLista.Condicion}} - {{ pedidoLista.PrecioTotal}}
+  <button type="button" class="btn btn-danger" >Eliminar</button>
+  </li>
+</ul>

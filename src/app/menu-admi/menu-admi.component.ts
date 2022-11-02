@@ -13,7 +13,7 @@ export class MenuAdmiComponent implements OnInit {
   ngOnInit(): void {
   }
   Acceder1(): void {
-    this.router.navigate(['/Pedidos']);
+    this.router.navigate(['/Agregar-Pedido']);
   }
   Acceder2(): void {
     this.router.navigate(['/Almacen']);
