@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Empleado } from '../Interfaces/Empleado';
+import { AgregarService } from '../Servicios/agregar.service';
 
 @Component({
   selector: 'app-ver-empleados',
@@ -11,16 +12,23 @@ export class VerEmpleadosComponent implements OnInit {
   @Input() empleadoLista:Empleado;
 
   @Input() indice:number;
+  ListaEmp: Empleado[]=[];
+  constructor(private agregarEmpleadoService:AgregarService){ }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void{
+    this.obtenerEmpleados();
+  }
+  obtenerEmpleados(){
+    this.agregarEmpleadoService.getEmpleados()
+    .subscribe(data=> {
+      this.ListaEmp = data;
+    });
   }
 
-  items = [''];
+  // items = [''];
 
-  AgregarCaracteristica(newItem:string){
-    this.items.push(newItem);
-    console.log(this.items)
-  }
+  // AgregarCaracteristica(newItem:string){
+  //   this.items.push(newItem);
+  //   console.log(this.items)
+  // }
 }

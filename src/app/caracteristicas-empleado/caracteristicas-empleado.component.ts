@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CaracteristicasEmpleadoComponent implements OnInit {
 
-  @Output() Caracteristicas = new EventEmitter<string>();
+  // @Output() Caracteristicas = new EventEmitter<string>();
 
-  AgregarCaracteristicas(value:string) {
-    this.Caracteristicas.emit(value);
-  }
+  // AgregarCaracteristicas(value:string) {
+  //   this.Caracteristicas.emit(value);
+  // }
 
   constructor() { }
 
